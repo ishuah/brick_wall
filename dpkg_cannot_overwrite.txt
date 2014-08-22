@@ -1,0 +1,7 @@
+Error encountered >>
+dpkg: error processing /path/to/deb/file (--unpack):
+	trying to overwrite '/some/other/path'
+dpkg-deb: error:subprocess paste was killed by signal (Broken Pipe)
+
+Fix >>
+sudo dpkg -i --force-overwrite /path/to/deb/file/
