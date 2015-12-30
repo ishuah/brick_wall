@@ -3,7 +3,6 @@ def merge_and_count_split_inv(A):
 		half = len(A)//2
 		B = A[:half]
 		C = A[half:]
-		D = A
 
 		merge_and_count_split_inv(B)
 		merge_and_count_split_inv(C)
@@ -15,13 +14,22 @@ def merge_and_count_split_inv(A):
 
 		while i < len(B) and j < len(C):
 			if B[i] < C[j]:
-				D[k] = B[i]
+				A[k] = B[i]
 				k +=1
 				i +=1
 			else:
-				D[k] = C[j]
+				A[k] = C[j]
 				j += 1
 				k += 1
 				count += len(B) - i
+
+		while i < len(B):
+			A[k] = B[i]
+			k +=1
+			i +=1
+		while j < len(C):
+			A[k] = C[j]
+			k+=1
+			j+=1
 
 		return count
