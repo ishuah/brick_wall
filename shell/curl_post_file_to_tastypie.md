@@ -1,0 +1,1 @@
+curl --header "Authorization:ApiKey kariuki+housestarksoldier@ishuah.com:956254a3e7a9d3ecb7e4e80999e1a8ba76e84d08" -X POST -F "report=/api/v1/report/16/" -F "timestamp=Mon, 08 Aug 2016 15:20:57 +0000" -F "image=@/Users/ishuahkariuki/Pictures/charging-rhino.jpg"  http://localhost:8000/api/v1/media/
